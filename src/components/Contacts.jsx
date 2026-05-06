@@ -103,7 +103,13 @@ export default function Contacts() {
               <span>Surat, India</span>
             </div>
           </div>
-
+          <button
+          className="btn-primary"
+          onClick={handleSubmit}
+          disabled={status === "sending"}
+        >
+          {status === "sending" ? "Sending…" : "Submit"}
+        </button>
 
 
           {status === "ok" && (
@@ -154,13 +160,7 @@ export default function Contacts() {
             {errors.msg && <span className="field-error">{errors.msg}</span>}
           </div>
         </div>
-        <button
-          className="btn-primary"
-          onClick={handleSubmit}
-          disabled={status === "sending"}
-        >
-          {status === "sending" ? "Sending…" : "Submit"}
-        </button>
+        
 
       </div>
     </section>
