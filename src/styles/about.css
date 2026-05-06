@@ -1,0 +1,140 @@
+/* ── ABOUT SECTION ── */
+.about {
+  background: #141c2b;
+  padding: 100px 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Services column */
+.services-col {
+  position: relative;
+  padding-left: 56px;
+  display: flex;
+  flex-direction: column;
+}
+.services-vline {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: #e8473f;
+}
+.service-entry {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 28px 0;
+  position: relative;
+}
+.service-dot {
+  position: relative;
+  height: 0;
+}
+.service-dot::before {
+  content: '';
+  position: absolute;
+  left: -62px; top: 50%;
+  transform: translateY(-50%);
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #e8473f;
+  box-shadow: 0 0 12px rgba(232,71,63,0.6);
+  z-index: 2;
+}
+.service-icon {
+  width: 72px; height: 72px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  font-size: 2rem;
+}
+.service-icon img {
+  width: 46px; height: 46px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.service-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+
+/* About right column */
+.about-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+  margin-bottom: 28px;
+  line-height: 1.05;
+}
+.about-desc {
+  color: #8fa3be;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 44px;
+  max-width: 520px;
+}
+.stats-row {
+  display: flex;
+  gap: 52px;
+  align-items: flex-start;
+}
+.stat-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.stat-number .sym {
+  color: #e8473f;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.stat-label {
+  font-size: 0.92rem;
+  color: #8fa3be;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .about { padding: 100px 28px 60px; gap: 48px; }
+  .services-col { padding-left: 40px; }
+  .service-dot::before { left: -46px; }
+}
+
+@media (max-width: 640px) {
+  .about { grid-template-columns: 1fr; gap: 52px; padding: 80px 20px 60px; min-height: unset; }
+  .about-col { order: -1; }
+  .services-col { order: 1; padding-left: 36px; }
+  .about-title { font-size: clamp(1.8rem, 7vw, 2.4rem); margin-bottom: 20px; }
+  .about-desc { font-size: 0.95rem; margin-bottom: 36px; max-width: 100%; }
+  .stats-row { gap: 28px; flex-wrap: wrap; }
+  .stat-number { font-size: 2rem; }
+  .stat-number .sym { font-size: 1.7rem; }
+  .service-dot::before { left: -41px; width: 12px; height: 12px; }
+  .service-name { font-size: 1.05rem; }
+  .service-icon { width: 60px; height: 60px; }
+}
+
+@media (max-width: 380px) {
+  .stats-row { gap: 20px; }
+  .stat-number { font-size: 1.8rem; }
+}
