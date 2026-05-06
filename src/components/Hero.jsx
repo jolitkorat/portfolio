@@ -1,4 +1,5 @@
 import resumePDF from '/assets/RESUME.pdf';
+import yourProfilePic from '/assets/your-profile-pic.png';
 const SKILLS = [
   "HTML5", "CSS", "Javascript", "Node.js", "React", "Git", "Github",
 ];
@@ -45,7 +46,7 @@ export default function Hero() {
           <div className="avatar-ring" />
           {/* Replace avatar-placeholder with an <img> once you have your photo:
               <img className="avatar-photo" src="/assets/your-profile-pic.png" alt="Jolit Korat" /> */}
-          <img className="avatar-photo" src="/assets/your-profile-pic.png" alt="Jolit Korat" />
+          <img className="avatar-photo" src={yourProfilePic} alt="Jolit Korat" />
           <span className="bracket-right">&gt;</span>
         </div>
 
