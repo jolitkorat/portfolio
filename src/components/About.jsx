@@ -12,8 +12,8 @@ const SERVICES = [
 
 const STATS = [
   { target: 10, sym: "+", label: "Completed<br/>Projects" },
-  { target: 99,  sym: "%", label: "Client<br/>satisfaction" },
-  { target: 1,  sym: "+", label: "Years of<br/>experience" },
+  { target: 99,  sym: "%", label: "Client<br/>Satisfaction" },
+  { target: 1,  sym: "+", label: "Years of<br/>Experience" },
 ];
 
 export default function About() {
