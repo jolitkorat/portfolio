@@ -18,7 +18,7 @@ export default function Footer() {
         </a>
 
         {/* GitHub */}
-        <a className="social-btn" href="https://github.com" target="_blank" rel="noreferrer" title="GitHub">
+        <a className="social-btn" href="www.linkedin.com/in/jolit-korat-3a8374276" target="_blank" rel="noreferrer" title="GitHub">
           <img src={githubIcon} alt="GitHub" />
         </a>
 
